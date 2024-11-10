@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            background: #2fdab8;
+            display: flex;
+            flex-wrap: wrap;
+            /* margin: 60px 0; */
+
+
+
+
+
+
+        }
+
+        .left {
+
+            /* width: 50%; */
+            /* background: #2fdab8; */
+            flex-grow: 1;
+        }
+
+        .left img {
+            width: 100%;
+            /* background-size: cover; */
+        }
+
+        .right {
+            width: 50%;
+            height: 200px;
+            background: #2fdab8;
+            position: relative;
+            flex-grow: 1;
+
+        }
+
+        .information {
+            padding: 60px;
+            height: 355px;
+            width: 80%;
+            /* flex-grow: 1; */
+
+            background: white;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            font-family: Montserrat;
+
+        }
+
+        .information p {
+            padding-top: 20px;
+        }
+
+        .information span {
+            color: #fc636b;
+        }
+
+        .users {
+            /* border: 1px solid black; */
+            /* padding-top: 150px; */
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            padding-top: 40px;
+            scale: 1.2;
+        }
+
+        .users i {
+            color: #2fdab8;
+        }
+
+        .users h5 {
+            font-size: 30px;
+        }
+
+        @media (max-width:767.98px)
+        {
+            .information
+            {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="save">
+        <div class="main">
+            <div class="left">
+                <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/mid.jpg"
+                    alt="">
+            </div>
+            <div class="right">
+                <div class="information">
+                    <h2>SAVE UP TO <span>50%</span> IN THIS WEEK</h2>
+                    <P>Suspendisse varius turpis efficitur erat laoreet dapibus. Mauris sollicitudin scelerisque
+                        commodo.Nunc dapibus mauris sed metus finibus posuere</P>
+                    <div class="users">
+                        <div class="customer">
+                            <i class="fa-regular fa-user"></i>
+                            <h4>CUTOMERS</h4>
+                            <h5 id="first"></h5>
+                        </div>
+                        <div class="event">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <h4>EVENTS</h4>
+                            <h5 id="second"></h5>
+                        </div>
+                        <div class="awards">
+                            <i class="fa-solid fa-award"></i>
+                            <h4>AWARDS</h4>
+                            <h5 id="third"></h5>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        _first = document.getElementById("first");
+        _second = document.getElementById('second');
+        _third = document.getElementById('third');
+        
+
+
+
+        x = 0;
+        function _x() {
+            if (x < 653) {
+                _first.innerHTML = ++x
+            }
+        }
+        setInterval(_x)
+
+          
+        function _y()
+        {
+            if (x<823)
+        {
+            _second.innerHTML = ++x
+        }
+        }
+        setInterval(_y)
+
+        function _z()
+        {
+           if (x<45)
+           {
+            _third.innerHTML = ++x
+           }
+        }
+        setInterval(_z)
+
+
+
+    </script>
+</body>
+
+</html>
