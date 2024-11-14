@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #header {
+
+            background: lightblue;
+              
+            padding: 10px 40px;
+        }
+
+        #list li {
+            display: inline-block;
+
+        }
+
+        .logo {
+            font-size: 25px;
+        }
+
+        #list ul {
+            text-align: center;
+            word-spacing: 120px;
+        }
+
+        li a {
+            text-decoration: none;
+            color: black;
+            font-size: 25px;
+            position: relative;
+        }
+
+
+
+
+        #submenu li {
+            display: block;
+        }
+
+
+
+        #submenu ul {
+          
+            background: lightcoral;
+            word-spacing: 0;
+            width: 250px;
+            height: 100%;
+            margin-left: 50px;
+        }
+
+        #submenu ul li a{
+            text-align: center;
+            display: block;
+            padding: 4px 0;
+        }
+
+        .image {
+            height: 300px;
+            width: 300px;
+            /* border: 5px solid black; */
+            /* position: absolute; */
+            top: 100px;
+            left: 0;
+        }
+
+       
+
+        #submenu {
+            display: flex;
+           position: absolute;
+           top: 100px;
+           left: -20px;
+           opacity: 0;
+          
+        }
+
+        #list ul li{
+            position: relative;
+        }
+
+       
+
+        #logo{
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        #icon i {
+            font-size: 25px;
+            background: lightcyan;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        #innerlist li{
+            list-style: none;
+            font-size: 15px;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        #innerlist{
+            position: absolute;
+           top: -150px;
+           left: 0;
+           background: lightcoral;
+           z-index: -1;
+           width: 100%;
+           opacity: 0;
+           transition: .5s;
+        }
+
+        @media (max-width:500px)
+        {
+            #list{
+                display: none;
+            }
+
+            #logo{
+                display: flex;
+            }
+        }
+           
+          
+            
+    </style>
+</head>
+
+<body>
+    <div id="header">
+         <div id="logo">
+            <div>
+                <h1>logo</h1>
+            </div>
+            <div id="icon">
+                <i id="click" class="fa-solid fa-bars" onclick=" return inner()">
+                    <div id="innerlist">
+                        <ul>
+                            <li>Home</li>
+                            <li>About</li>
+                            <li>Service</li>
+                            <li>Product</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                </i>
+            </div>
+         </div>
+        <div id="list">
+            <ul>
+                <li><a href=""  onclick=" return show()">Home</a>
+                    <div id="submenu">
+                        <div class="image">
+                            <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/top2.jpg" alt="">
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href=""  onclick=" return show()">About</a>
+                    <div id="submenu">
+                        <div class="image">
+                            <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/top2.jpg" alt="">
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div></li>
+                <li><a href="" onclick=" return show()">Product</a>
+                    <div id="submenu">
+                        <div class="image">
+                            <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/top2.jpg" alt="">
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div></li>
+                <li><a href="" onclick=" return show()">Service</a>
+                    <div id="submenu">
+                        <div class="image">
+                            <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/top2.jpg" alt="">
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div></li>
+                <li><a href="" onclick=" return show()">Contact</a>
+                    <div id="submenu">
+                        <div class="image">
+                            <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/top2.jpg" alt="">
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                <li><a href="">Product 1</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div></li>
+
+            </ul>
+        </div>
+    </div>
+    <script>
+        sub = document.getElementById('submenu');
+        a_tag = document.getElementById('home');
+        _inner = document.getElementById('innerlist');
+
+        console.log(_inner)
+       function inner()
+       {
+       if(_inner.style.opacity == "0")
+       {
+         _inner.style.opacity = "1"
+        _inner.style.top = "100px"
+       }
+       else{
+         _inner.style.opacity = "0"
+         _inner.style.top = "-150px"
+       
+       }
+       
+       }
+       
+
+        function show()
+        {
+           
+           if(sub.style.opacity == "0")
+           {
+            sub.style.opacity = "1"
+            sub.style.top = "50px"
+            return false;
+           }
+           else
+           {
+            sub.style.opacity = "0"
+            sub.style.top = "50px"
+            return false;
+           }
+        
+        }
+
+
+        
+    </script>
+</body>
+
+</html>
