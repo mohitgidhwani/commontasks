@@ -263,14 +263,16 @@
         console.log(_inner)
        function inner()
        {
-       if(_inner.style.opacity == "0")
+       if(_inner.style.opacity == "1")
        {
-         _inner.style.opacity = "1"
-        _inner.style.top = "100px"
+         _inner.style.opacity = "0"
+           _inner.style.top = "-150px"
+        
        }
        else{
-         _inner.style.opacity = "0"
-         _inner.style.top = "-150px"
+         _inner.style.opacity = "1"
+           _inner.style.top = "100px"
+         
        
        }
        
@@ -280,15 +282,15 @@
         function show()
         {
            
-           if(sub.style.opacity == "0")
+           if(sub.style.opacity == "1")
            {
-            sub.style.opacity = "1"
+            sub.style.opacity = "0"
             sub.style.top = "50px"
             return false;
            }
            else
            {
-            sub.style.opacity = "0"
+            sub.style.opacity = "1"
             sub.style.top = "50px"
             return false;
            }
