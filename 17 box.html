@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        /* width: 700px; */
+        /* height: 200px; */
+        background: lightblue;
+        margin: 100px auto;
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+        gap: 20px;
+    }
+
+    #box1{
+        height: 100px;
+        width: 100px;
+        background: red;
+    }
+    #box2{
+        height: 100px;
+        width: 100px;
+        background: blue;
+        transition: .5s;
+    }
+    #box3{
+        height: 100px;
+        width: 100px;
+        background: cyan;
+        transition: .5s;
+    }
+    #box4{
+        height: 100px;
+        width: 100px;
+        background: green;
+        transition: .5s;
+    }
+    #box5{
+        height: 100px;
+        width: 100px;
+        background: gray;
+        transition: .5s;
+    }
+</style>
+<body>
+    <div class="container">
+        <div id="box1" onclick="b_2()"></div>
+        <div id="box2" onclick="b_3()"></div>
+        <div id="box3" onclick="b_4()"></div>
+        <div id="box4" onclick="b_5()"></div>
+        <div id="box5"></div>
+    </div>
+    <script>
+        b2 = document.getElementById('box2');
+        b3 = document.getElementById('box3');
+        b4 = document.getElementById('box4');
+        b5 = document.getElementById('box5');
+        
+
+        function b_2()
+        {
+            b2.style.height = "80px"
+        }
+        function b_3()
+        {
+            b3.style.height = "60px"
+        }
+        function b_4()
+        {
+            b4.style.height = "40px"
+        }
+        function b_5()
+        {
+            b5.style.height = "20px"
+        }
+
+    </script>
+</body>
+</html>
