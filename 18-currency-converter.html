@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <input type="text" value="">
+   <select name="" id="" >
+      <!-- <option value="1">India</option> -->
+      <option value="0.012">USA</option>
+      <option value="0.043">UAE</option>
+      <option value="0.017">CAN</option>
+   </select>
+   <button onclick="test()">Convert</button>
+   <h1 id="result"></h1>
+  
+   <script>
+      inp = document.querySelector('input');
+      sel = document.querySelector('select');
+      _result = document.getElementById('result')
+
+      
+      function test()
+      {
+        _result.innerHTML = inp.value*sel.value
+      }
+   </script>
+</body>
+</html>
