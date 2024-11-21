@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * body {
+            background: lightblue;
+        }
+        .container{
+            width: 700px;
+            height: 700px;
+            /* border: 1px solid black; */
+            margin: 100px auto;
+            position: relative;
+            background: lightblue
+        }
+
+        #left-brow{
+            height: 250px;
+            width: 250px;
+            border: 20px solid transparent;
+            border-top: 20px solid black;
+            border-radius: 50%;
+            position: absolute;
+            top: 140px;
+            left: 50px;
+            rotate: -15deg;
+           
+        }
+
+        .left-b{
+            animation: left-b 1s infinite alternate;
+        }
+
+        @keyframes left-b{
+            0%{
+            top: 160px;
+            }
+
+            50%{
+                left: 60px;
+            }
+        }
+
+        #right-brow{
+            height: 250px;
+            width: 250px;
+            border: 20px solid transparent;
+            border-top: 20px solid black;
+            border-radius: 50%;
+            position: absolute;
+            top: 140px;
+            right: 50px;
+            rotate: 15deg;
+           
+        }
+
+        .right-b{
+            animation: right-b 1s infinite alternate;
+        }
+
+        @keyframes right-b{
+            0%{
+            top: 160px;
+            }
+
+            50%{
+                right: 60px;
+            }
+        }
+
+        .left-eye{
+            height: 310px;
+            width: 250px;
+            border-radius: 50%;
+            background: white;
+            position: absolute;
+            top: 200px;
+            left: 80px;
+            overflow: hidden;
+            border: 10px solid black;
+        }
+
+        /* .left-eye::after{
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            height: 350px;
+            width: 410px;
+            top: -350px;
+            left: -29px;
+            background: lightcoral;
+            animation: left 2s  linear ;
+        } */
+
+        .left-eye::before{
+            content: ".";
+            position: absolute;
+            font-size: 80px;
+            color: white;
+            top: 141px;
+            left: 119px;
+            height: 100px;
+            width: 100px;
+            background: black;
+            border-radius: 50%;
+            border: 5px solid black;
+            animation: left-blink 1s infinite linear alternate;
+            
+        }
+        @keyframes left-blink{
+            0%{
+                left: 50px;
+            }
+            10%{
+                left: 50px;
+            }
+
+           
+        }
+
+        @keyframes right-blink{
+            0%{
+                left: 50px;
+            }
+            10%{
+                left: 50px;
+            }
+        }
+
+        .right-eye::before{
+            content: ".";
+            position: absolute;
+            font-size: 80px;
+            color: white;
+            top: 141px;
+            left: 119px;
+            height: 100px;
+            width: 100px;
+            background: black;
+            border-radius: 50%;
+            border: 5px solid black;
+            animation: right-blink 1s infinite linear alternate;
+        }
+
+        /* @keyframes  */
+
+        /* @keyframes left {
+            from{
+                top: 0px;
+            }
+
+            to{
+                top: -350px;
+            }
+
+        } */
+
+        /* .right-eye::after{
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            height: 350px;
+            width: 410px;
+            top: -350px;
+            right: -29px;
+            background: lightcoral;
+            animation: right 2s  linear ;
+        } */
+
+        /* @keyframes right {
+            from{
+                top: 0px;
+            }
+
+            to{
+                top: -350px;
+            }
+        } */
+
+        .right-eye{
+            height: 310px;
+            width: 250px;
+            border-radius: 50%;
+            background: white;
+            position: absolute;
+            top: 200px;
+            right: 80px;
+            overflow: hidden;
+            border: 10px solid black;
+        }
+        button{
+            height: 100px;
+            width: 200px;
+            font-size: 70px;
+            display: block;
+            margin: auto;
+            margin-bottom: -100px;
+        }
+        #left{
+           
+            position: absolute;
+            border-radius: 50%;
+            height: 350px;
+            width: 410px;
+            top: -10px;
+            left: -29px;
+            background: lightcoral;
+            animation: left 2s  linear ; 
+            /* transition: 5s; */
+        }
+
+        #right{
+            /* content: ""; */
+            position: absolute;
+            border-radius: 50%;
+            height: 350px;
+            width: 410px;
+            top: -10px;
+            right: -29px;
+            background: lightcoral;
+            /* animation: right 2s  linear ; */
+        }
+           
+    </style>
+</head>
+<body>
+    <div class="container">
+         <div id="left-brow" ></div>
+         <div class="left-eye">
+            <div  id="left"></div>
+         </div>
+         <div id="right-brow"></div>
+         <div class="right-eye">
+            <div id="right"></div>
+         </div>
+         
+    </div>
+    <button onclick="blink()">Move</button>
+    <script>
+       left_blink = document.getElementById('left');
+       right_blink = document.getElementById('right');
+       left_ =document.getElementById('left-brow');
+       right_ = document.getElementById('right-brow')
+       console.log(left_blink);
+
+       function blink()
+       {
+          left_blink.style.top = "-350px"
+          left_blink.style.transition = "1s"
+           right_blink.style.top = "-350px"
+           right_blink.style.transition = "1s"
+           left_.className = "left-b"
+           right_.className="right-b"
+
+
+       }
+    </script>
+</body>
+</html>
