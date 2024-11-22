@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 304px;
+            background: lightblue;
+            padding: 5px;
+            margin: 100px auto;
+        }
+
+        input {
+            width: 98%;
+            height: 50px;
+            display: block;
+            font-size: 20px;
+        }
+
+        button {
+            height: 40px;
+            width: 40px;
+            margin: 5px auto;
+
+        }
+
+        .number>button {
+            width: 98px;
+        }
+
+        .zero button {
+
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div class="container">
+            <input type="number" id="result" disabled>
+            <button id="plus" onclick=" return _plus()">+</button>
+            <button id="min">-</button>
+            <button id="mult">*</button>
+            <button id="div">/</button>
+            <button id="mode">%</button>
+            <button>C</button>
+            <button>AC</button>
+            <br>
+               
+
+            <div class="number">
+                <button id="btn1" onclick="return btn_1(b1)">1</button>
+                <button id="btn2" onclick="return btn_1(b2)">2</button>
+                <button id="btn3" onclick="return btn_3()">3</button>
+                <br>
+                <button id="btn4" onclick="return btn_4()">4</button>
+                <button id="btn5" onclick="return btn_5()">5</button>
+                <button id="btn6" onclick="return btn_6()">6</button>
+                <br>
+                <button id="btn7" onclick="return btn_7()">7</button>
+                <button id="btn8" onclick="return btn_8()">8</button>
+                <button id="btn9" onclick="return btn_9()">9</button>
+                <br>
+                <div class="zero">
+                    <button id="btn0" onclick="return btn_0()">0</button>
+                    <button id="sum">=</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script>
+        result = document.getElementById('result')
+        b1 = document.getElementById('btn1');
+        b2 = document.getElementById('btn2');
+        b3 = document.getElementById('btn3');
+        b4 = document.getElementById('btn4');
+        b5 = document.getElementById('btn5');
+        b6 = document.getElementById('btn6');
+        b7 = document.getElementById('btn7');
+        b8 = document.getElementById('btn8');
+        b9 = document.getElementById('btn9');
+        b0 = document.getElementById('btn0');
+        plus_ = document.getElementById('plus');
+
+
+      
+       
+        function _plus()
+        {
+            result.value += plus_.innerHTML
+            return false;
+        }
+
+
+        function btn_1(numb) {
+            result.value += numb.innerHTML
+            return false;
+        }
+
+        function btn_2() {
+            result.value += b2.innerHTML
+            return false;
+        }
+        function btn_3() {
+            result.value += b3.innerHTML
+            return false;
+        }
+        function btn_4() {
+            result.value += b4.innerHTML
+            return false;
+        }
+        function btn_5() {
+            result.value += b5.innerHTML
+            return false;
+        }
+        function btn_6() {
+            result.value += b6.innerHTML
+            return false;
+        }
+        function btn_7() {
+            result.value += b7.innerHTML
+            return false;
+        }
+        function btn_8() {
+            result.value += b8.innerHTML
+            return false;
+        }
+        function btn_9() {
+            result.value += b9.innerHTML
+            return false;
+        }
+        function btn_0() {
+            result.value += b0.innerHTML
+            return false;
+        }
+
+    </script>
+</body>
+
+</html>
