@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 304px;
+            background: lightblue;
+            padding: 5px;
+            margin: 100px auto;
+        }
+
+        input {
+            width: 98%;
+            height: 50px;
+            display: block;
+            font-size: 20px;
+        }
+
+        button {
+            height: 40px;
+            width: 40px;
+            margin: 5px auto;
+
+        }
+
+        .number>button {
+            width: 98px;
+        }
+
+        .zero button {
+
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div class="container">
+            <input type="text" id="result" disabled>
+            <button onclick=" return display('+')">+</button>
+            <button onclick=" return display('-')">-</button>
+            <button onclick=" return display('*')">*</button>
+            <button onclick=" return display('/')">/</button>
+            <button onclick=" return display('%')">%</button>
+            <button onclick=" return deleteChar()">C</button>
+            <button onclick="clear()">AC</button>
+            <br>
+               
+
+            <div class="number">
+               <button onclick=" return display(1)">1</button>
+               <button onclick=" return display(2)">2</button>
+               <button onclick=" return display(3)">3</button>
+               <button onclick=" return display(4)">4</button>
+               <button onclick=" return display(5)">5</button>
+               <button onclick=" return display(6)">6</button>
+               <button onclick=" return display(7)">7</button>
+               <button onclick=" return display(8)">8</button>
+               <button onclick=" return display(9)">9</button>
+               <div class="zero">
+                <button onclick=" return display(0)">0</button>
+                <button onclick="return calculate()">=</button>
+               </div>
+            </div>
+        </div>
+    </form>
+    <script>
+        result = document.getElementById('result');
+     
+
+
+        function display(value)
+        {
+            result.value += value;
+            return false;
+        }
+
+        function clear()
+        {
+            result.value = '';
+        }
+
+        function deleteChar() 
+        {
+            result.value = result.value.slice(0, -1);
+            return false;
+        }
+
+
+        function calculate()
+        {
+            result.value = eval(result.value);
+            return false;
+        }
+
+
+
+
+
+
+      
+       
+      
+
+    </script>
+</body>
+
+</html>
